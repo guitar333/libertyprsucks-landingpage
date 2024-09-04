@@ -5,12 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Liberty PR Sucks</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; padding: 20px; }
     h1 { color: red; }
+    .container { max-width: 800px; margin: auto; text-align: left; }
+    .language-switch { margin-bottom: 20px; }
+    h2 { color: darkblue; }
+    p { line-height: 1.5; }
   </style>
 </head>
 <body>
   <h1>Liberty PR Sucks</h1>
-  <p>Welcome to the website documenting bad service at Liberty Puerto Rico.</p>
+  
+  <div class="container">
+    <!-- Language Switcher (Optional) -->
+    <div class="language-switch">
+      <a href="#en" onclick="switchLanguage('en')">English</a> | 
+      <a href="#es" onclick="switchLanguage('es')">Español</a>
+    </div>
+
+    <!-- English Content -->
+    <div id="content-en">
+      <h2>The Truth Behind the Service</h2>
+      <p>At <strong>Liberty PR Sucks</strong>, we’re dedicated to documenting the numerous issues with Liberty Puerto Rico’s mobile and internet service. Since the acquisition of AT&T’s operations, many customers have faced poor service, dropped calls, billing problems, and long wait times for customer support. Despite efforts to improve, Liberty continues to lose the trust of its customers.</p>
+      
+      <h2>Switch to Starlink for Reliable Internet</h2>
+      <p><strong>Starlink</strong>, powered by SpaceX, offers a cutting-edge satellite internet service that doesn’t rely on Liberty's infrastructure. This means you can avoid the outages and service issues caused by Liberty’s legacy systems. Starlink provides high-speed, low-latency internet, even in rural and underserved areas of Puerto Rico.</p>
+      <ul>
+        <li><strong>Pricing:</strong> Starlink’s hardware is now priced at <strong>$299</strong> (down from $499), and the monthly service fee is <strong>$99</strong>.</li>
+        <li><strong>Availability:</strong> Starlink has expanded its reach in Puerto Rico, with the latest generation of hardware available at <strong>Home Depot</strong> and other retailers.</li>
+        <li><strong>Why it’s better:</strong> Starlink operates independently of local infrastructure, meaning you won’t be impacted by Liberty’s frequent outages.</li>
+      </ul>
+      <p><a href="https://www.starlink.com">Learn more about Starlink</a>.</p>
+      
+      <h2>Switch to T-Mobile for Better Mobile Service</h2>
+      <p>If you're fed up with dropped calls and poor mobile service, <a href="https://www.t-mobile.com/coverage/puerto-rico">T-Mobile Puerto Rico</a> offers reliable coverage and excellent customer service, with better performance than Liberty Mobile. Thousands of Puerto Ricans have already made the switch.</p>
+    </div>
+
+    <!-- Spanish Content -->
+    <div id="content-es" style="display: none;">
+      <h2>La Verdad Detrás del Servicio</h2>
+      <p>En <strong>Liberty PR Sucks</strong>, estamos aquí para exponer los problemas continuos con los servicios móviles e internet de Liberty Puerto Rico. Desde que Liberty adquirió las operaciones de AT&T, los clientes han experimentado llamadas caídas, internet poco confiable, errores de facturación y un servicio al cliente deficiente. Es evidente que Liberty continúa perdiendo la confianza de sus clientes.</p>
+      
+      <h2>Cámbiate a Starlink para un Internet Confiable</h2>
+      <p><strong>Starlink</strong>, impulsado por SpaceX, ofrece un servicio de internet satelital de última tecnología que no depende de la infraestructura de Liberty. Esto significa que puedes evitar las interrupciones y los problemas de servicio causados por los sistemas heredados de Liberty. Starlink ofrece internet de alta velocidad y baja latencia, incluso en áreas rurales y mal atendidas de Puerto Rico.</p>
+      <ul>
+        <li><strong>Precios:</strong> El equipo de Starlink ahora cuesta <strong>$299</strong> (bajó de $499), y la tarifa mensual de servicio es de <strong>$99</strong>.</li>
+        <li><strong>Disponibilidad:</strong> Starlink ha ampliado su cobertura en Puerto Rico, con la última generación de hardware disponible en <strong>Home Depot</strong> y otros minoristas.</li>
+        <li><strong>Por qué es mejor:</strong> Starlink opera de manera independiente de la infraestructura local, lo que significa que no te verás afectado por las frecuentes interrupciones de Liberty.</li>
+      </ul>
+      <p><a href="https://www.starlink.com">Más información sobre Starlink</a>.</p>
+      
+      <h2>Cámbiate a T-Mobile para un Mejor Servicio Móvil</h2>
+      <p>Si estás cansado de las llamadas caídas y el mal servicio móvil, <a href="https://www.t-mobile.com/coverage/puerto-rico">T-Mobile Puerto Rico</a> ofrece una cobertura confiable y un excelente servicio al cliente, con un rendimiento superior al de Liberty Mobile. Miles de puertorriqueños ya han hecho el cambio.</p>
+    </div>
+  </div>
+
+  <script>
+    function switchLanguage(lang) {
+      document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+      document.getElementById('content-es').style.display = (lang === 'es') ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
