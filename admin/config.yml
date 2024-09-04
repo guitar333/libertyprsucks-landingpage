@@ -1,1 +1,17 @@
 
+backend:
+  name: git-gateway
+  branch: main  # Branch to update (e.g., master, main)
+
+media_folder: "static/images" # Folder where uploaded files will go
+public_folder: "/images"      # Folder for accessing images in the browser
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
